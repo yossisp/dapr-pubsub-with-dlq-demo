@@ -1,0 +1,10 @@
+apiVersion: dapr.io/v1alpha1
+kind: Subscription
+metadata:
+  name: order
+spec:
+  topic: orders
+  route: /orders
+  pubsubname: orderpubsub
+  deadLetterTopic: poisonMessages
+

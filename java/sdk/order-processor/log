@@ -1,0 +1,140 @@
+ℹ️  Starting Dapr with id order-processor. HTTP Port: 61608. gRPC Port: 61609
+time="2022-10-17T14:33:06.484836+03:00" level=info msg="starting Dapr Runtime -- version 1.8.4 -- commit 18575823c74318c811d6cd6f57ffac76d5debe93" app_id=order-processor instance=Yossis-MacBook-Pro.local scope=dapr.runtime type=log ver=1.8.4
+time="2022-10-17T14:33:06.484882+03:00" level=info msg="log level set to: info" app_id=order-processor instance=Yossis-MacBook-Pro.local scope=dapr.runtime type=log ver=1.8.4
+time="2022-10-17T14:33:06.484993+03:00" level=info msg="metrics server started on :61610/" app_id=order-processor instance=Yossis-MacBook-Pro.local scope=dapr.metrics type=log ver=1.8.4
+time="2022-10-17T14:33:06.48572+03:00" level=info msg="standalone mode configured" app_id=order-processor instance=Yossis-MacBook-Pro.local scope=dapr.runtime type=log ver=1.8.4
+time="2022-10-17T14:33:06.485735+03:00" level=info msg="app id: order-processor" app_id=order-processor instance=Yossis-MacBook-Pro.local scope=dapr.runtime type=log ver=1.8.4
+time="2022-10-17T14:33:06.485949+03:00" level=info msg="mTLS is disabled. Skipping certificate request and tls validation" app_id=order-processor instance=Yossis-MacBook-Pro.local scope=dapr.runtime type=log ver=1.8.4
+time="2022-10-17T14:33:06.486577+03:00" level=info msg="local service entry announced: order-processor -> 10.100.102.5:61617" app_id=order-processor instance=Yossis-MacBook-Pro.local scope=dapr.contrib type=log ver=1.8.4
+time="2022-10-17T14:33:06.486638+03:00" level=info msg="Initialized name resolution to mdns" app_id=order-processor instance=Yossis-MacBook-Pro.local scope=dapr.runtime type=log ver=1.8.4
+time="2022-10-17T14:33:06.486763+03:00" level=info msg="loading components" app_id=order-processor instance=Yossis-MacBook-Pro.local scope=dapr.runtime type=log ver=1.8.4
+time="2022-10-17T14:33:06.489783+03:00" level=info msg="waiting for all outstanding components to be processed" app_id=order-processor instance=Yossis-MacBook-Pro.local scope=dapr.runtime type=log ver=1.8.4
+time="2022-10-17T14:33:06.489957+03:00" level=warning msg="ConsumerID is deprecated, if ConsumerID and ConsumerGroup are both set, ConsumerGroup is used" app_id=order-processor instance=Yossis-MacBook-Pro.local scope=dapr.contrib type=log ver=1.8.4
+time="2022-10-17T14:33:06.489996+03:00" level=info msg="kafka: TLS connectivity to broker disabled" app_id=order-processor instance=Yossis-MacBook-Pro.local scope=dapr.contrib type=log ver=1.8.4
+time="2022-10-17T14:33:06.499529+03:00" level=info msg="component loaded. name: orderpubsub, type: pubsub.kafka/v1" app_id=order-processor instance=Yossis-MacBook-Pro.local scope=dapr.runtime type=log ver=1.8.4
+time="2022-10-17T14:33:06.499621+03:00" level=info msg="all outstanding components processed" app_id=order-processor instance=Yossis-MacBook-Pro.local scope=dapr.runtime type=log ver=1.8.4
+time="2022-10-17T14:33:06.499658+03:00" level=info msg="gRPC proxy enabled" app_id=order-processor instance=Yossis-MacBook-Pro.local scope=dapr.runtime type=log ver=1.8.4
+time="2022-10-17T14:33:06.499881+03:00" level=info msg="enabled gRPC tracing middleware" app_id=order-processor instance=Yossis-MacBook-Pro.local scope=dapr.runtime.grpc.api type=log ver=1.8.4
+time="2022-10-17T14:33:06.499941+03:00" level=info msg="enabled gRPC metrics middleware" app_id=order-processor instance=Yossis-MacBook-Pro.local scope=dapr.runtime.grpc.api type=log ver=1.8.4
+time="2022-10-17T14:33:06.500147+03:00" level=info msg="API gRPC server is running on port 61609" app_id=order-processor instance=Yossis-MacBook-Pro.local scope=dapr.runtime type=log ver=1.8.4
+time="2022-10-17T14:33:06.50526+03:00" level=info msg="enabled metrics http middleware" app_id=order-processor instance=Yossis-MacBook-Pro.local scope=dapr.runtime.http type=log ver=1.8.4
+time="2022-10-17T14:33:06.505295+03:00" level=info msg="enabled tracing http middleware" app_id=order-processor instance=Yossis-MacBook-Pro.local scope=dapr.runtime.http type=log ver=1.8.4
+time="2022-10-17T14:33:06.505444+03:00" level=info msg="http server is running on port 61608" app_id=order-processor instance=Yossis-MacBook-Pro.local scope=dapr.runtime type=log ver=1.8.4
+time="2022-10-17T14:33:06.50546+03:00" level=info msg="The request body size parameter is: 4" app_id=order-processor instance=Yossis-MacBook-Pro.local scope=dapr.runtime type=log ver=1.8.4
+time="2022-10-17T14:33:06.505538+03:00" level=info msg="enabled gRPC tracing middleware" app_id=order-processor instance=Yossis-MacBook-Pro.local scope=dapr.runtime.grpc.internal type=log ver=1.8.4
+time="2022-10-17T14:33:06.505561+03:00" level=info msg="enabled gRPC metrics middleware" app_id=order-processor instance=Yossis-MacBook-Pro.local scope=dapr.runtime.grpc.internal type=log ver=1.8.4
+time="2022-10-17T14:33:06.505616+03:00" level=info msg="internal gRPC server is running on port 61617" app_id=order-processor instance=Yossis-MacBook-Pro.local scope=dapr.runtime type=log ver=1.8.4
+time="2022-10-17T14:33:06.50563+03:00" level=info msg="application protocol: http. waiting on port 8080.  This will block until the app is listening on that port." app_id=order-processor instance=Yossis-MacBook-Pro.local scope=dapr.runtime type=log ver=1.8.4
+ℹ️  Updating metadata for app command: java -jar target/OrderProcessingService-0.0.1-SNAPSHOT.jar
+✅  You're up and running! Both Dapr and your app logs will appear here.
+
+== APP == 
+== APP ==   .   ____          _            __ _ _
+== APP ==  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+== APP == ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+== APP ==  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+== APP ==   '  |____| .__|_| |_|_| |_\__, | / / / /
+== APP ==  =========|_|==============|___/=/_/_/_/
+== APP ==  :: Spring Boot ::                (v2.6.3)
+== APP == 
+== APP == 2022-10-17 14:33:07.708  INFO 3863 --- [           main] c.s.OrderProcessingServiceApplication    : Starting OrderProcessingServiceApplication v0.0.1-SNAPSHOT using Java 11.0.3 on Yossis-MacBook-Pro.local with PID 3863 (/Users/yos/code/Java/dapr/quickstarts/pub_sub/java/sdk/order-processor/target/OrderProcessingService-0.0.1-SNAPSHOT.jar started by yos in /Users/yos/code/Java/dapr/quickstarts/pub_sub/java/sdk/order-processor)
+== APP == 2022-10-17 14:33:07.711  INFO 3863 --- [           main] c.s.OrderProcessingServiceApplication    : No active profile set, falling back to default profiles: default
+== APP == 2022-10-17 14:33:08.725  INFO 3863 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+== APP == 2022-10-17 14:33:08.736  INFO 3863 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+== APP == 2022-10-17 14:33:08.737  INFO 3863 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+== APP == 2022-10-17 14:33:08.792  INFO 3863 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+== APP == 2022-10-17 14:33:08.793  INFO 3863 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1015 ms
+== APP == 2022-10-17 14:33:09.436  INFO 3863 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+time="2022-10-17T14:33:09.43904+03:00" level=info msg="application discovered on port 8080" app_id=order-processor instance=Yossis-MacBook-Pro.local scope=dapr.runtime type=log ver=1.8.4
+time="2022-10-17T14:33:09.439122+03:00" level=warning msg="[DEPRECATION NOTICE] Adding a default content type to incoming service invocation requests is deprecated and will be removed in the future. See https://docs.dapr.io/operations/support/support-preview-features/ for more details. You can opt into the new behavior today by setting the configuration option `ServiceInvocation.NoDefaultContentType` to true." app_id=order-processor instance=Yossis-MacBook-Pro.local scope=dapr.runtime type=log ver=1.8.4
+== APP == 2022-10-17 14:33:09.448  INFO 3863 --- [           main] c.s.OrderProcessingServiceApplication    : Started OrderProcessingServiceApplication in 2.477 seconds (JVM running for 3.008)
+== APP == 2022-10-17 14:33:09.501  INFO 3863 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+== APP == 2022-10-17 14:33:09.501  INFO 3863 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+== APP == 2022-10-17 14:33:09.502  INFO 3863 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+time="2022-10-17T14:33:09.753083+03:00" level=info msg="application configuration loaded" app_id=order-processor instance=Yossis-MacBook-Pro.local scope=dapr.runtime type=log ver=1.8.4
+time="2022-10-17T14:33:09.753371+03:00" level=info msg="actors: state store is not configured - this is okay for clients but services with hosted actors will fail to initialize!" app_id=order-processor instance=Yossis-MacBook-Pro.local scope=dapr.runtime type=log ver=1.8.4
+time="2022-10-17T14:33:09.753444+03:00" level=info msg="actor runtime started. actor idle timeout: 1h0m0s. actor scan interval: 30s" app_id=order-processor instance=Yossis-MacBook-Pro.local scope=dapr.runtime.actor type=log ver=1.8.4
+time="2022-10-17T14:33:09.77071+03:00" level=info msg="app is subscribed to the following topics: [poisonMessages orders] through pubsub=orderpubsub" app_id=order-processor instance=Yossis-MacBook-Pro.local scope=dapr.runtime type=log ver=1.8.4
+time="2022-10-17T14:33:10.111877+03:00" level=info msg="dapr initialized. Status: Running. Init Elapsed 3626.134ms" app_id=order-processor instance=Yossis-MacBook-Pro.local scope=dapr.runtime type=log ver=1.8.4
+== APP == yossi
+== APP == 2022-10-17 14:33:10.206  INFO 3863 --- [nio-8080-exec-3] c.s.c.OrderProcessingServiceController   : Subscriber received: 0
+== APP == yossi
+== APP == 2022-10-17 14:33:10.215  INFO 3863 --- [nio-8080-exec-4] c.s.c.OrderProcessingServiceController   : Subscriber received: 1
+== APP == yossi
+== APP == 2022-10-17 14:33:10.218  INFO 3863 --- [nio-8080-exec-4] c.s.c.OrderProcessingServiceController   : Subscriber received: 2
+== APP == 2022-10-17 14:33:10.225 ERROR 3863 --- [nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: java.lang.RuntimeException: test error] with root cause
+== APP == 
+== APP == java.lang.RuntimeException: test error
+== APP == 	at com.service.controller.OrderProcessingServiceController.getCheckout(OrderProcessingServiceController.java:34) ~[classes!/:0.0.1-SNAPSHOT]
+== APP == 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+== APP == 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+== APP == 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+== APP == 	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+== APP == 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.15.jar!/:5.3.15]
+== APP == 	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.15.jar!/:5.3.15]
+== APP == 	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.15.jar!/:5.3.15]
+== APP == 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.15.jar!/:5.3.15]
+== APP == 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.15.jar!/:5.3.15]
+== APP == 	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.15.jar!/:5.3.15]
+== APP == 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.15.jar!/:5.3.15]
+== APP == 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.15.jar!/:5.3.15]
+== APP == 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.15.jar!/:5.3.15]
+== APP == 	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.15.jar!/:5.3.15]
+== APP == 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.56.jar!/:na]
+== APP == 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.15.jar!/:5.3.15]
+== APP == 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.56.jar!/:na]
+== APP == 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.56.jar!/:na]
+== APP == 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar!/:na]
+== APP == 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.56.jar!/:na]
+== APP == 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar!/:na]
+== APP == 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar!/:na]
+== APP == 	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.15.jar!/:5.3.15]
+== APP == 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar!/:5.3.15]
+== APP == 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar!/:na]
+== APP == 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar!/:na]
+== APP == 	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.15.jar!/:5.3.15]
+== APP == 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar!/:5.3.15]
+== APP == 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar!/:na]
+== APP == 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar!/:na]
+== APP == 	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.15.jar!/:5.3.15]
+== APP == 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar!/:5.3.15]
+== APP == 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar!/:na]
+== APP == 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar!/:na]
+== APP == 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.56.jar!/:na]
+== APP == 	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.56.jar!/:na]
+== APP == 	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.56.jar!/:na]
+== APP == 	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.56.jar!/:na]
+== APP == 	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.56.jar!/:na]
+== APP == 	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.56.jar!/:na]
+== APP == 	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.56.jar!/:na]
+== APP == 	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.56.jar!/:na]
+== APP == 	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.56.jar!/:na]
+== APP == 	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) ~[tomcat-embed-core-9.0.56.jar!/:na]
+== APP == 	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732) ~[tomcat-embed-core-9.0.56.jar!/:na]
+== APP == 	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.56.jar!/:na]
+== APP == 	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.56.jar!/:na]
+== APP == 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.56.jar!/:na]
+== APP == 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.56.jar!/:na]
+== APP == 	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+== APP == 
+time="2022-10-17T14:33:10.248554+03:00" level=warning msg="retriable error returned from app while processing pub/sub event 11297a7e-5d4c-4892-a773-466ac59e9e83, topic: orders, body: {\"timestamp\":\"2022-10-17T11:33:10.232+00:00\",\"status\":500,\"error\":\"Internal Server Error\",\"path\":\"/orders\"}. status code returned: 500" app_id=order-processor instance=Yossis-MacBook-Pro.local scope=dapr.runtime type=log ver=1.8.4
+== APP == yossi
+== APP == 2022-10-17 14:33:10.261  INFO 3863 --- [nio-8080-exec-6] c.s.c.OrderProcessingServiceController   : Subscriber received: 3
+== APP == yossi
+== APP == 2022-10-17 14:33:10.261  INFO 3863 --- [nio-8080-exec-5] c.s.c.OrderProcessingServiceController   : failedMessages Subscriber received
+== APP == 2022-10-17 14:33:10.262  INFO 3863 --- [nio-8080-exec-5] c.s.c.OrderProcessingServiceController   : failedMessages Subscriber received: 2
+== APP == yossi
+== APP == 2022-10-17 14:33:10.264  INFO 3863 --- [nio-8080-exec-6] c.s.c.OrderProcessingServiceController   : Subscriber received: 4
+== APP == yossi
+== APP == 2022-10-17 14:33:10.266  INFO 3863 --- [nio-8080-exec-6] c.s.c.OrderProcessingServiceController   : Subscriber received: 5
+== APP == yossi
+== APP == 2022-10-17 14:33:10.268  INFO 3863 --- [nio-8080-exec-6] c.s.c.OrderProcessingServiceController   : Subscriber received: 6
+== APP == yossi
+== APP == 2022-10-17 14:33:10.270  INFO 3863 --- [nio-8080-exec-6] c.s.c.OrderProcessingServiceController   : Subscriber received: 7
+== APP == yossi
+== APP == 2022-10-17 14:33:10.273  INFO 3863 --- [nio-8080-exec-6] c.s.c.OrderProcessingServiceController   : Subscriber received: 8
+== APP == yossi
+== APP == 2022-10-17 14:33:10.275  INFO 3863 --- [nio-8080-exec-6] c.s.c.OrderProcessingServiceController   : Subscriber received: 9
+== APP == yossi
+== APP == 2022-10-17 14:33:10.278  INFO 3863 --- [nio-8080-exec-7] c.s.c.OrderProcessingServiceController   : Subscriber received: 10
+time="2022-10-17T14:33:10.367658+03:00" level=info msg="placement tables updated, version: 0" app_id=order-processor instance=Yossis-MacBook-Pro.local scope=dapr.runtime.actor.internal.placement type=log ver=1.8.4
