@@ -1,7 +1,7 @@
 # Dapr pub/sub example using dead letter queue and Redis Streams/Kafka
 
 This repo is essentially a small subset of the official Dapr quickstarts [repo](https://github.com/dapr/quickstarts).
-There's also blog post which provides a tutorial around the code.
+I also wrote a [blog post](https://www.spektor.dev/how-to-set-up-dapr-with-dead-letter-queue-in-java/) which provides a tutorial around the code.
 This quickstart includes one publisher:
 
 - Java client message generator `checkout`
