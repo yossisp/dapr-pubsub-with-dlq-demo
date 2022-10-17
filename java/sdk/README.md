@@ -1,11 +1,7 @@
-# Dapr pub/sub
+# Dapr pub/sub example using dead letter queue and Redis Streams/Kafka
 
- In this quickstart, there is a publisher microservice `checkout` and a subscriber microservice `order-processor` to demonstrate how Dapr enables a publish-subscribe pattern. `checkout` generates messages and publishes to a specific orders topic, and `order-processor` subscribers listen for messages of topic orders.
-
-Visit [this](https://docs.dapr.io/developing-applications/building-blocks/pubsub/) link for more information about Dapr and Pub-Sub.
-
-> **Note:** This example leverages the Dapr client SDK.  If you are looking for the example using only HTTP [click here](../http).
-
+This repo is essentially a small subset of the official Dapr quickstarts [repo](https://github.com/dapr/quickstarts).
+There's also blog post which provides a tutorial around the code.
 This quickstart includes one publisher:
 
 - Java client message generator `checkout`
@@ -23,72 +19,41 @@ And one subscriber:
     * [OpenJDK 11](https://jdk.java.net/11/)
 * [Apache Maven](https://maven.apache.org/install.html) version 3.x.
 
-### Run Java message subscriber app with Dapr
-
-1. Navigate to directory and install dependencies:
-<!-- STEP
-name: Install Java dependencies
--->
+### Run Java message publisher app with Dapr (Redis Streams)
 
 ```bash
-cd ./order-processor
+cd java/sdk/checkout
 mvn clean install
+dapr run --app-id checkout --components-path ../../../components-redis -- java -jar target/CheckoutService-0.0.1-SNAPSHOT.jar
 ```
-<!-- END_STEP -->
 
-2. Run the Java subscriber app with Dapr:
-<!-- STEP
-name: Run Java publisher
-working_dir: ./order-processor
-expected_stdout_lines:
-  - 'Subscriber received: 2'
-  - "Exited App successfully"
-expected_stderr_lines:
-output_match_mode: substring
-background: true
-sleep: 10
--->
-```bash
-cd ./order-processor
- dapr run --app-port 8080 --app-id order-processor-sdk --components-path ../../../components -- java -jar target/OrderProcessingService-0.0.1-SNAPSHOT.jar
-```
-<!-- END_STEP -->
-
-### Run Java message publisher app with Dapr
-
-1. Navigate to the directory and install dependencies:
-
-<!-- STEP
-name: Install Java dependencies
--->
+### Run Java message subscriber app with Dapr (Redis Streams)
 
 ```bash
-cd ./checkout
+cd java/sdk/order-processor
 mvn clean install
+dapr run --app-port 8080 --app-id order-processor --components-path ../../../components-redis -- java -jar target/OrderProcessingService-0.0.1-SNAPSHOT.jar 2>&1 | tee log
 ```
-<!-- END_STEP -->
-
-2. Run the Java publisher app with Dapr:
-<!-- STEP
-name: Run Java publisher
-working_dir: ./checkout
-expected_stdout_lines:
-  - 'Published data: 1'
-  - 'Published data: 2'
-  - "Exited App successfully"
-expected_stderr_lines:
-output_match_mode: substring
-background: true
-sleep: 10
--->
+### Run Java message publisher app with Dapr (Kafka)
+#### Start Kafka
+```bash
+docker-compose up
+```
 
 ```bash
-cd ./checkout
-dapr run --app-id checkout-sdk --components-path ../../../components -- java -jar target/CheckoutService-0.0.1-SNAPSHOT.jar
+cd java/sdk/checkout
+mvn clean install
+dapr run --app-id checkout --components-path ../../../components-kafka -- java -jar target/CheckoutService-0.0.1-SNAPSHOT.jar
 ```
-<!-- END_STEP -->
+
+### Run Java message subscriber app with Dapr (Redis Streams)
+#### Start Kafka
+```bash
+docker-compose up
+```
 
 ```bash
-dapr stop --app-id checkout-sdk
-dapr stop --app-id order-processor-sdk
+cd java/sdk/order-processor
+mvn clean install
+dapr run --app-port 8080 --app-id order-processor --components-path ../../../components-kafka -- java -jar target/OrderProcessingService-0.0.1-SNAPSHOT.jar 2>&1 | tee log
 ```
